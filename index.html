@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Marvel Character Index</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <section id="homepage">
-
+   
+    <section id="homepage" class="jumbotron">
+       
         <div id="titlebox">
-            <h1>Marvel Character Index</h1>
+            <div class="introhead">
+            <h1><span>Marvel Character Index</span></h1>
+            </div>
+            <div class="intropara">
             <p>Search for your favorite Marvel characters and see what media they appear in! </p>
-        </div>
+            </div>
+      
         <div id="searchbar">
-            <input type="text" placeholder="What character are you looking for?"/>
-            <button type="submit">Search</button>
+            <input id="textbox" type="text" placeholder="Type character name" /> 
+            <button id="searchbtn" type="submit"><a href="characterindex.html">Search</a></button>
+        </div>
         </div>
 
 
@@ -26,6 +32,6 @@
 </body>
 
 
-<script src="script.js"></script>
+<script src="./assets/js/script.js"></script>
 
 </html>
