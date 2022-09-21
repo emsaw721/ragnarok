@@ -10,16 +10,12 @@ body,html {
     height: 100%; 
 }
 
-body {
-    background-image: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif"); 
+.jumbotron {
+    background-color: var(--primary-color);
+    background-image: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif");  
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover; 
-    animation: myAnimate 10s; 
-}
-
-@keyframes myAnimate {
-    50% {background-color: var(--primary-color);}
 }
 
 
