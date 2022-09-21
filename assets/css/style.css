@@ -11,6 +11,7 @@ body,html {
 }
 
 .jumbotron {
+    height: 100%; 
     background-color: var(--primary-color);
     background-image: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif");  
     background-repeat: no-repeat;
@@ -20,49 +21,38 @@ body,html {
 
 
 #homepage {
+    height: 100%; 
     font-family: "optima", sans-serif;
     display: flex;
     flex-direction: column;
 }
 
-@keyframes zoomout {
-    0% {transform: scale(2)
-    -webkit-transform: scale(2, 0.5);}  
-
-    100% {transform: scale(1);
-    -webkit-transform: scale(1, 0.5);}
-}
-
-@-webkit-keyframes zoomout {
-    0% {transform: scale(2.0);
-    -webkit-transform: scale(2.0);}
-
-    100% {transform: scale(2.0);
-    -webkit-transform: scale(2.0);}
-}
 
 
 #titlebox {
+    height: 100%; 
     background-color: var(--primary-color);
     color: white; 
     text-align: center;
+    display: flex; 
+    flex-direction: column;
     animation: fadein 10s; 
     -webkit-animation: fadein 10s;
 }
 
 #titlebox h1 {
-   
+   height: 50%; 
     align-items: center;
     font-weight: bold;
     font-size: 75px;
-   /* text-decoration: overline underline;
-   text-decoration-thickness: 3px; */
-   border: 3px solid white; 
+   text-decoration: overline underline;
+   text-decoration-thickness: 3px;
    text-transform: uppercase; 
     
 }
 
 #titlebox p {
+    height: 50%; 
     text-align: center;
     font-size: 45px; 
     font-weight: 100; 
@@ -114,18 +104,26 @@ body,html {
 @keyframes fade-in {
     from {
         opacity:0;
+        transform: scale(2);
+         -webkit-transform: scale(2, 0.5)
     }
     to{
         opacity:1; 
+        transform: scale(1);
+        -webkit-transform: scale(1, 0.5);
     }
 }
 
 @-webkit-keyframes fadein {
     from {
         opacity: 0;
+        transform: perspective(500px) scale(2.0);
+        -webkit-transform: scale(2.0)
     }
      to {
         opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1, 0.5);
      }
 }
 
