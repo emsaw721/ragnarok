@@ -19,7 +19,7 @@ body {
 }
 
 @keyframes myAnimate {
-    50% {background-color: var(--secondary-color);}
+    50% {background-color: var(--primary-color);}
 }
 
 
@@ -31,6 +31,7 @@ body {
 
 
 #titlebox {
+    background-color: var(--primary-color);
     color: white; 
     text-align: center;
     animation: fadein 10s; 
@@ -56,10 +57,14 @@ body {
 }
 
 #searchbar {
+    background-color: var(--primary-color);
     align-items: center;
     display: flex;
 }
 
+#searchbtn {
+
+}
 .modal {
     display: none; 
     position: fixed; 
