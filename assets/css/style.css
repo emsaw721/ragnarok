@@ -8,6 +8,7 @@
 
 body,html {
     height: 100%; 
+    background-color: var(--primary-color);
 }
 
 .jumbotron {
@@ -40,19 +41,33 @@ body,html {
     -webkit-animation: fadein 10s;
 }
 
-#titlebox h1 {
-   height: 50%; 
+.introhead {
+    margin-top: 15%;
     align-items: center;
     font-weight: bold;
     font-size: 75px;
-   text-decoration: overline underline;
-   text-decoration-thickness: 3px;
    text-transform: uppercase; 
     
 }
 
+#titlebox h1 {
+    background-color: white; 
+    overflow: hidden;
+    display:inline-block;
+    padding: 10px; 
+    font-weight: bold;
+    color: transparent; 
+    font-size: 100px; 
+}
+
+span {
+    background: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif"); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    display: block; 
+}
+
 #titlebox p {
-    height: 50%; 
     text-align: center;
     font-size: 45px; 
     font-weight: 100; 
@@ -61,7 +76,7 @@ body,html {
 #searchbar {
     background-color: var(--primary-color);
     align-items: center;
-    display: flex;
+    
 }
 
 #searchbtn {
@@ -104,26 +119,22 @@ body,html {
 @keyframes fade-in {
     from {
         opacity:0;
-        transform: scale(2);
-         -webkit-transform: scale(2, 0.5)
+      
     }
     to{
         opacity:1; 
-        transform: scale(1);
-        -webkit-transform: scale(1, 0.5);
+      
     }
 }
 
 @-webkit-keyframes fadein {
     from {
         opacity: 0;
-        transform: perspective(500px) scale(2.0);
-        -webkit-transform: scale(2.0)
+      
     }
      to {
         opacity: 1;
-        transform: scale(1);
-        -webkit-transform: scale(1, 0.5);
+     
      }
 }
 
