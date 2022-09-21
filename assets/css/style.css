@@ -8,7 +8,6 @@
 
 body,html {
     height: 100%; 
-    background-color: var(--primary-color);
 }
 
 .jumbotron {
@@ -167,3 +166,49 @@ a:hover {
      }
 }
 
+/* end of homepage css */ 
+
+/* start of unique character index css */ 
+
+header {
+    padding: 20px 0; 
+    background-color: var(--tertiary-color); 
+}
+
+header a {
+    text-decoration: none; 
+
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    list-style: none;
+    color: var(--quaternary-color); 
+}
+
+header nav ul li a {
+    color: var(--quaternary-color); 
+    padding: 10px 15px; 
+    font-weight: lighter; 
+    font-size: 1.55vw; 
+    border: 3px solid var(--quinary-color); 
+    background-color: var(--quinary-color); 
+    
+
+}
+
+header nav ul li a:hover {
+    background-image: url("wolverinehulk.png"); 
+    font-weight: bold;
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+    display: block; 
+    letter-spacing: 1em; 
+}
