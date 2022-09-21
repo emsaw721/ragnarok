@@ -6,3 +6,9 @@
     --quinary-color: #1a323e; 
 }
 
+body /*or jumbotron, depends on html structure */ {
+    /* LOADING text flipped like at the begging of marvel movie
+    played before page loads*/
+    background-color: var(--quinary-color);
+    
+}
