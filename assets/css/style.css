@@ -194,25 +194,35 @@ header nav ul {
 }
 
 header nav ul li a {
+    font-family: sans-serif; 
     color: var(--quaternary-color); 
     padding: 10px 15px; 
     font-weight: lighter; 
     font-size: 1.55vw; 
-    border: 3px solid var(--quinary-color); 
-    background-color: var(--quinary-color); 
-    
 
 }
 
 header nav ul li a:hover {
-    background-image: url("wolverinehulk.png"); 
+    color: var(--quaternary-color); 
     font-weight: bold;
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text; 
-    display: block; 
-    letter-spacing: 1em; 
 }
 
-#mcu-info {
-    background-image: url(./css)
+.character-intro {
+    display: flex; 
+    font-family: sans-serif;
+    background-color: var(--primary-color)
+    /* background-image: url()  */
+    ;
+    padding: auto; 
+    margin: auto; 
+}
+
+.character-name {
+    padding: 5px; 
+    margin: 10px; 
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    justify-content: center; 
+    text-align: center;
+    border-radius: 5px; 
 }
