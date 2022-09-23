@@ -212,3 +212,7 @@ header nav ul li a:hover {
     display: block; 
     letter-spacing: 1em; 
 }
+
+#mcu-info {
+    background-image: url(./css)
+}
