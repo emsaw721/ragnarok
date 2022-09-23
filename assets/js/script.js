@@ -1,14 +1,14 @@
 
 //Marvel Characters API URL
 
-
+$("#searchbtn").click(function() {
 var apiKey = "65ccc0475fbe74a76cd9393f0c51a7bd"
 var privateKey = "0b99ee2827d2a7cf3d74437bb5ec552cc183ef69"
-//var ts = 1663898032
+
 var ts = Date.now(); 
 let hash = CryptoJS.MD5(ts+privateKey+apiKey);
-//let hash = "c4d2fb01f9d397259bd6f4c337e2dd8a"
-var marvelUrl = 'https://gateway.marvel.com/v1/public/characters?ts='+ts+'&apikey='+apiKey+'&hash='+hash
+var characterName = $("#textbox").val(); 
+var marvelUrl = "https://gateway.marvel.com/v1/public/characters?" +characterName+ "ts=" +ts+ "&apikey=" +apiKey+ "&hash=" +hash
 console.log(marvelUrl)
 
 //fetch function
@@ -19,6 +19,8 @@ fetch(marvelUrl)
         console.log(data);
     }
 );
+
+}); 
 
 // Google search API URL
     //<script async src="https://cse.google.com/cse.js?cx=f79ab53a4a2ab43ef">
