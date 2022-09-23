@@ -8,7 +8,7 @@ var privateKey = "0b99ee2827d2a7cf3d74437bb5ec552cc183ef69"
 var ts = Date.now(); 
 let hash = CryptoJS.MD5(ts+privateKey+apiKey);
 var characterName = $("#textbox").val(); 
-var marvelUrl = "https://gateway.marvel.com/v1/public/characters?" +characterName+ "ts=" +ts+ "&apikey=" +apiKey+ "&hash=" +hash
+var marvelUrl = "https://gateway.marvel.com/v1/public/characters?name=" +characterName+ "&ts=" +ts+ "&apikey=" +apiKey+ "&hash=" +hash
 console.log(marvelUrl)
 
 //fetch function
