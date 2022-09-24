@@ -44,6 +44,8 @@ fetch(marvelUrl)
     .then(data => {
         // data from the api
         console.log(data);
+        $(".character-name").innerHTML= data.name; 
+        console.log(data.name)
     })}
 
     else{
@@ -57,22 +59,20 @@ fetch(marvelUrl)
        secondHTML(); 
     })
 
-}); 
+
 
 
 function secondHTML() {
    
-   
   $("#firstpage").empty() 
     
-
-
 }
 
 
 
 
 
+}); 
 
 // Google search API URL
     //<script async src="https://cse.google.com/cse.js?cx=f79ab53a4a2ab43ef">
