@@ -10,9 +10,7 @@ body,html {
     height: 100%; 
 }
 
-#firstpage {
-    
-}
+
 
 #homepage {
     height: 100%; 
@@ -26,6 +24,8 @@ body,html {
     display: flex;
     flex-direction: column;
 }
+
+
 
 
 
