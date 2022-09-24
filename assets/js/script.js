@@ -1,6 +1,12 @@
 
 //Marvel Characters API URL
 
+$(document).ready( function() {
+
+    
+    $("#secondpage").addClass("hidden") 
+
+
 $("#searchbtn").click(function() {
 var apiKey = "65ccc0475fbe74a76cd9393f0c51a7bd"
 var privateKey = "0b99ee2827d2a7cf3d74437bb5ec552cc183ef69"
@@ -63,16 +69,16 @@ fetch(marvelUrl)
 
 
 
-
 function secondHTML() {
    
   $("#firstpage").empty() 
+
+  $("#secondpage").removeClass("hidden") 
     
 }
 
 
-
-
+})
 
 }); 
 
