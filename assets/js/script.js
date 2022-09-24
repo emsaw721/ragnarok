@@ -44,8 +44,12 @@ fetch(marvelUrl)
     .then(data => {
         // data from the api
         console.log(data);
-        $(".character-name").innerHTML= data.name; 
-        console.log(data.name)
+
+        for (let i=0; i<data.length; i++ ) {
+        var apendedName = data.results[i].name; 
+        console.log(apendedName)
+        $(".character-name").innerHTML = apendedName 
+        }
     })}
 
     else{
@@ -55,9 +59,7 @@ fetch(marvelUrl)
 }); 
 
 
-    $("#searchbtn").click(function(event) {
-       secondHTML(); 
-    })
+  secondHTML(); 
 
 
 
