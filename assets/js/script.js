@@ -33,25 +33,32 @@ if (characterName === "") {
     return;
 
 }; 
+
+
+//fetch function
+fetch(marvelUrl)
+    .then(function(response) {
+        if (response.ok) {
+            console.log(response)
+        response.json()
+    .then(data => {
+        // data from the api
+        console.log(data);
+    })}
+
+    else{
+        throw new Error('HTTP error, status = ' + response.status);
+    }; 
+
+}); 
 }); 
 
-// //fetch function
-// fetch(marvelUrl)
-//     .then(function(response) {
-//         if (response.ok) {
-//         response.json()
-//     .then(data => {
-//         // data from the api
-//         console.log(data);
-//     })}
-
-//     else{
-//         throw new Error('HTTP error, status = ' + response.status);
-//     }; 
-
-// }); 
-// }); 
-
+    $("#searchbtn").click(function(event) {
+        var newHTML = document.createElement("a")
+        newHTML.href= "characterindex.html" 
+        newHTML.innerHTML= "Search" 
+        this.append(newHTML)
+    })
 
 
 // Google search API URL
