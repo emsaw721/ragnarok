@@ -10,6 +10,10 @@ body,html {
     height: 100%; 
 }
 
+#firstpage {
+    
+}
+
 #homepage {
     height: 100%; 
     background-color: var(--primary-color);
