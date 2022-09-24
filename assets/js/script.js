@@ -51,14 +51,38 @@ fetch(marvelUrl)
     }; 
 
 }); 
-}); 
+
 
     $("#searchbtn").click(function(event) {
-        var newHTML = document.createElement("a")
-        newHTML.href= "characterindex.html" 
-        newHTML.innerHTML= "Search" 
-        this.append(newHTML)
+       secondHTML(); 
     })
+
+
+function secondHTML() {
+    $("body").empty(); 
+
+    var body = document.getElementById("second-page")
+    var header= document.createElement("header")
+    header.setAttribute("id", "MCU-title")
+    var navBar = document.createElement("nav")
+    var navUl = document.createElement("ul")
+    var ulLi = document.createElement("li") 
+    ulLi.href = "index.html"
+    ulLi.innerHTML = "Return to Homepage"
+
+    navUl.appendChild(ulLi)
+    navBar.appendChild(navUl)
+    header.appendChild(navBar)
+    body.appendChild(header) 
+    
+
+
+
+}
+}); 
+
+
+
 
 
 // Google search API URL
