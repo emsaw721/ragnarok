@@ -58,7 +58,12 @@ $.ajax({
             var appendedName = $("<div>").text(results[i].name); 
             $(".character-name").append(appendedName)
 
-            // $(".charimg").attr("src", results[i].thumbnail + ".jpg")
+
+            var imgHalf = JSON.stringify(results[i].thumbnail); 
+            localStorage.setItem("img", imgHalf)
+            console.log(imgHalf)
+            // from localstorage, get the Path and create a var for it and replace "imgHalf" in function below with new variable 
+            $(".charimg").attr("src", imgHalf + ".jpg")
 
     
             var comicAppearances = JSON.stringify(data.results[i].comics.items);
