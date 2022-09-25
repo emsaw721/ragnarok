@@ -11,7 +11,7 @@ At first, the application user will see the opening page.
 
 Then, the user will click in the text box and enter the character for which they would like to retrieve the data. Then, they will click the search button. 
 
-![Alt text](./assets/images/city-enter.png)
+![Alt text](./assets/images/charsearch.png)
 
 The user will see the character's data as well as any merchandise/ youtube clips associated with the character.  
 
