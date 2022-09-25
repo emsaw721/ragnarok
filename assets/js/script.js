@@ -62,6 +62,7 @@ $.ajax({
             var comicAppearances = data.results[i].comics;
             console.log(comicAppearances)
 
+
             var comicDisplay = $("<div>").text(comicAppearances.items);
             console.log(comicDisplay)
             $(".comics").append(comicDisplay)
@@ -71,7 +72,7 @@ $.ajax({
             //     console.log(comicDisplay)
             //     $(".comics").append(comicDisplay)
             // }
-            } 
+
 })
 // fetch(marvelUrl)
 //     .then(function(response) {
