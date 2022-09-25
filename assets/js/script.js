@@ -65,7 +65,7 @@ $.ajax({
             // from localstorage, get the Path and create a var for it and replace "imgHalf" in function below with new variable 
             $(".charimg").attr("src", imgHalf + ".jpg")
 
-    
+            // figure out a way to select the name only and then display each name on individual cards
             var comicAppearances = $("<div>").text(JSON.stringify(data.results[i].comics.items));
             console.log(comicAppearances)
                 comicAppearances.attr("class", "card") 
