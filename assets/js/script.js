@@ -42,35 +42,62 @@ if (characterName === "") {
 
 
 //fetch function
-fetch(marvelUrl)
-    .then(function(response) {
-        if (response.ok) {
-            console.log(response)
-        response.json()
-    .then(data => {
-        // data from the api
-        console.log(data);
 
-        for (let i=0; i<data.length; i++ ) {
-        var apendedName = data.results[i].name; 
-        console.log(apendedName)
-        $(".character-name").innerHTML = apendedName 
+$.ajax({
+    url: marvelUrl,
+    method: "GET"
+}).then(function(response){
+    console.log(response)
+    var data = response.data
+    console.log(data)
 
-        var comicAppearances = data.results[i].comics;
-        console.log(comicAppearances)
-        var comicDisplay = document.createElement("div")
-        comicDisplay = comicAppearances.items
-        $(".comics").append(comicDisplay)
-        }
+    var results = data.results 
+            console.log(results)
+    
+            for (let i=0; i< results.length; i++ ) {
+            var appendedName = $("<div>").text(results[i].name); 
+            console.log(appendedName)
+            $(".character-name").append(appendedName)
+    
+            var comicAppearances = data.results[i].comics;
+            console.log(comicAppearances)
+            var comicDisplay = document.createElement("div")
+            comicDisplay = comicAppearances.items
+            $(".comics").append(comicDisplay)
+            } 
+})
+// fetch(marvelUrl)
+//     .then(function(response) {
+//         if (response.ok) {
+//             console.log(response)
+//         }
+//             else{
+//                 throw new Error('HTTP error, status = ' + response.status);
+//             }
+//         response.json()
+//     .then(data => {
+//         // data from the api
+//         console.log(data);
+
+//         var results = data.results 
+//         console.log(results)
+
+//         for (let i=0; i< results.length; i++ ) {
+//         var appendedName = $("<div>").text(results[i].name); 
+//         console.log(appendedName)
+//         $(".character-name").append(appendedName)
+
+//         var comicAppearances = data.results[i].comics;
+//         console.log(comicAppearances)
+//         var comicDisplay = document.createElement("div")
+//         comicDisplay = comicAppearances.items
+//         $(".comics").append(comicDisplay)
+//         } 
 
 
-    })}
+//     })}
 
-    else{
-        throw new Error('HTTP error, status = ' + response.status);
-    }; 
-
-}); 
+// ); 
 
 
   secondHTML(); 
