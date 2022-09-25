@@ -10,31 +10,76 @@
 </head>
 
 <body>
-   
-    <section id="homepage" class="jumbotron">
-       
-        <div id="titlebox">
-            <div class="introhead">
-            <h1><span>Marvel Character Index</span></h1>
-            </div>
-            <div class="intropara">
-            <p>Search for your favorite Marvel characters and see what media they appear in! </p>
-            </div>
-      
-        <div id="searchbar">
-            <input id="textbox" type="text" placeholder="Type character name" /> 
-            <button id="searchbtn" type="submit"><a href="characterindex.html">Search</a></button>
-        </div>
-        </div>
+    <section id="firstpage">
+        <div id="homepage">
 
+            <div id="titlebox">
+                <h1><span>Marvel Character Index</span></h1>
+                <p>Search for your favorite Marvel characters and see what media they appear in! </p>
+                <input id="textbox" type="text" placeholder="Type character name" />
+                <button id="searchbtn" type="submit">Search</button>
+                <div class="modal" id="characterModal">
+                    <div class="modal-content">
+                            <p>Please input a Character name</p>
+                        <a class="close" href="#" rel="modal:close">close</a>	 
+                    </div>
+
+                </div>
+
+
+            </div>
+    </section>
+
+    <section id="secondpage">
+    <header id="MCU-title">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Return to Homepage</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <article id="MCU-info">
+        <div class="character-intro">
+            <img src="" />
+            <div class="character-name"></div>
+            <!-- Use JS to pull the character that was searched and append it to here -->
+        </div>
+        <div class="tv-media">
+            <h3>Films and movies that
+                <!-- JS to append character --> have appeared in:
+            </h3>
+        </div>
+        <div class="comics">
+            <h3>Comic Books that
+                <!-- JS to append character -->have appeared in:
+            </h3>
+        </div>
+        </div>
+    </article>
+
+    <section id="custom-search">
+        <div id="MCU-content">
+            <h3>Merch/other information</h3>
+        </div>
 
     </section>
+    </section>
+
 </body>
 
-
+<!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!--JQuery Modals-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!--MomentJS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- CryptoJS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<!-- Local JavaScript-->
 <script src="./assets/js/script.js"></script>
 
 </html>
