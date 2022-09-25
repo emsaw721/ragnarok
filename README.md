@@ -1,7 +1,7 @@
 ## ragnarok
 
 ## Description
-<a href="https://emsaw721.github.io/take-a-jacket/"> Marvel Character Index </a> is an application that allows the user to look up a Marvel character and retrieve information about the searched character.  
+<a href="https://emsaw721.github.io/ragnarok/"> Marvel Character Index </a> is an application that allows the user to look up a Marvel character and retrieve information about the searched character.  
 
 ## Usage
 Marvel Character Index uses the Marvel api to call information about character appearances in movies, television, and comic books. This application also uses Google api in order to search for merchandise/youtube clips associated with the character. 
