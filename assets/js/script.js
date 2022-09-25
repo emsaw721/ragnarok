@@ -56,73 +56,50 @@ $.ajax({
     
             for (let i=0; i< results.length; i++ ) {
             var appendedName = $("<div>").text(results[i].name); 
-            console.log(appendedName)
             $(".character-name").append(appendedName)
+
+            // $(".charimg").attr("src", results[i].thumbnail + ".jpg")
+
     
-            var comicAppearances = data.results[i].comics;
+            var comicAppearances = JSON.stringify(data.results[i].comics.items);
             console.log(comicAppearances)
 
 
-            var comicDisplay = $("<div>").text(comicAppearances.items);
-            console.log(comicDisplay)
-            $(".comics").append(comicDisplay)
+            $(".comics").append(comicAppearances)
+ 
+            var seriesAppearances = data.results[i].series.items;
+            console.log(seriesAppearances)
+
+
+            var seriesDisplay = $("<div>").text(JSON.stringify(seriesAppearances));
+            console.log(seriesDisplay)
+            $(".tv-media").append(seriesDisplay) 
             }
 
           
-
-
-// fetch(marvelUrl)
-//     .then(function(response) {
-//         if (response.ok) {
-//             console.log(response)
-//         }
-//             else{
-//                 throw new Error('HTTP error, status = ' + response.status);
-//             }
-//         response.json()
-//     .then(data => {
-//         // data from the api
-//         console.log(data);
-
-//         var results = data.results 
-//         console.log(results)
-
-//         for (let i=0; i< results.length; i++ ) {
-//         var appendedName = $("<div>").text(results[i].name); 
-//         console.log(appendedName)
-//         $(".character-name").append(appendedName)
-
-//         var comicAppearances = data.results[i].comics;
-//         console.log(comicAppearances)
-//         var comicDisplay = document.createElement("div")
-//         comicDisplay = comicAppearances.items
-//         $(".comics").append(comicDisplay)
-//         } 
-
-
-//     })}
-
-// ); 
-
 
   secondHTML(); 
 
 
 
-function secondHTML() {
+    function secondHTML() {
    
-  $("#firstpage").empty() 
+    $("#firstpage").empty() 
 
-  $("#secondpage").removeClass("hidden") 
+    $("#secondpage").removeClass("hidden") 
     
-}
+    }
 
 
 })
 
 })
 
-}); 
+
+// var googleUrl = AIzaSyCqukRh9S6YNRuqZEe3sQaOP34Lh2lM-Ko
+// $.ajax ({
+
+// })
 
 // Google search API URL
     //<script async src="https://cse.google.com/cse.js?cx=f79ab53a4a2ab43ef">
@@ -173,4 +150,4 @@ function secondHTML() {
 
 // characters.innerHTML=string;
 
-    
+});  
