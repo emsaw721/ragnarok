@@ -66,9 +66,9 @@ $.ajax({
             $(".charimg").attr("src", imgHalf + ".jpg")
 
     
-            var comicAppearances = JSON.stringify(data.results[i].comics.items);
+            var comicAppearances = $("<div>").text(JSON.stringify(data.results[i].comics.items));
             console.log(comicAppearances)
-
+                comicAppearances.attr("class", "card") 
 
             $(".comics").append(comicAppearances)
  
@@ -78,6 +78,7 @@ $.ajax({
 
             var seriesDisplay = $("<div>").text(JSON.stringify(seriesAppearances));
             console.log(seriesDisplay)
+            seriesDisplay.attr("class", "card")
             $(".tv-media").append(seriesDisplay) 
             }
 
