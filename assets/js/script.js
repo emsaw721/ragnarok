@@ -66,14 +66,11 @@ $.ajax({
             var comicDisplay = $("<div>").text(comicAppearances.items);
             console.log(comicDisplay)
             $(".comics").append(comicDisplay)
+            }
 
-            // for (let i=0; i< comicAppearances.length; i++) {
-            //     var comicDisplay = $("<div>").text(comicAppearances[i].items);
-            //     console.log(comicDisplay)
-            //     $(".comics").append(comicDisplay)
-            // }
+          
 
-})
+
 // fetch(marvelUrl)
 //     .then(function(response) {
 //         if (response.ok) {
@@ -120,6 +117,8 @@ function secondHTML() {
     
 }
 
+
+})
 
 })
 
