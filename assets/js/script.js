@@ -1,6 +1,6 @@
 
 //Marvel Characters API URL
-
+var pastCharacters = [];
 var comics = document.getElementsByClassName("comics");
 
 $(document).ready(function () {
@@ -62,13 +62,13 @@ $(document).ready(function () {
 
 
                 var imgHalf = JSON.stringify(results[i].thumbnail.path);
-                var imgLocal = imgHalf.slice(1, -1) 
-              
+                var imgLocal = imgHalf.slice(1, -1)
+
                 var jpgTag = ".jpg"
                 var imgUrl = imgLocal.concat("", jpgTag)
                 $(".charimg").attr("src", imgUrl)
 
-                
+
                 var comicAppearances = results[i].comics.items;
 
                 for (i = 0; i < comicAppearances.length; i++) {
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
             function secondHTML() {
 
-                $("#firstpage").empty()
+                $("#firstpage").addClass("hidden")
 
                 $("#secondpage").removeClass("hidden")
 
@@ -111,10 +111,31 @@ $(document).ready(function () {
 
         })
 
+
+       
+        pastCharacters.push(characterName);
+
+        localStorage.setItem("pastcharacters", pastCharacters);
+
+
+        console.log(pastCharacters)
+
+
+        var btnContainer = document.getElementById("pastsearch");
+
+        var btn = document.createElement("button");
+        btn.innerHTML = localStorage.getItem("pastcharacters");
+        btn.setAttribute("class", "charbtn");
+        btn.setAttribute("type", "button");
+        btnContainer.append(btn);
+        btn.addEventListener("click", function (event) {
+            characterName = $(this).text();
+
+        })
     })
 
 
-    // var googleUrl = AIzaSyCqukRh9S6YNRuqZEe3sQaOP34Lh2lM-Ko
+    // var googleKey = AIzaSyCqukRh9S6YNRuqZEe3sQaOP34Lh2lM-Ko
     // $.ajax ({
 
     // })
