@@ -221,14 +221,14 @@ header nav ul li a:hover {
 }
 
 #MCU-info {
-    background-color: var(--quinary-color);
+    background: url(../images/backgroundimg.png);
+
 }
 
 .character-intro {
     display: flex;
     font-family: sans-serif;
     padding: auto;
-    margin: auto;
 }
 
 .character-name {
@@ -242,6 +242,7 @@ header nav ul li a:hover {
     text-transform: uppercase;
     text-shadow: 1px 1px 2px white;
     color: var(--secondary-color);
+    background-color: var(--quaternary-color); 
     border-radius: 5px;
 }
 
@@ -253,40 +254,40 @@ header nav ul li a:hover {
 }
 
 .tv-media {
-    background-color: rgb(27, 114, 159, 0.5);
+    background-color: rgb(27, 114, 159, 0.7);
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     flex-basis: auto;
-    margin: 10px;
+    margin: 2%;
 
 }
 
-.tv-media h3 {
+
+.heading {
+    padding: 10px; 
     color: white;
-    font-size: 20px;
+    font-size: 3em;
     font-weight: 100;
+    background-color: var(--quinary-color);
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 2%;
 }
 
 .comics {
-    background-color: rgb(27, 114, 159, 0.5);
+    background-color: rgb(27, 114, 159, 0.7);
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     flex-basis: auto;
-    margin: 10px;
-}
-
-.comics h3 {
-    color: white;
-    font-size: 20px;
-    font-weight: 100;
+    margin: 2%;
 }
 
 
 
 .card {
-    margin: 30px;
+    margin: 2%;
     padding: 5%;
     background-color: var(--primary-color);
     border-radius: 5px;
