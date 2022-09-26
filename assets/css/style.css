@@ -373,13 +373,20 @@ header nav ul li a:hover {
 
     }
 
+    .modal {
+        background-color: rgb(12, 20, 70, 0.5);
+        background: var(--tertiary-color); 
+    }
+
     .modal-content p {
-        font-size: 15px;
+        font-size: 15px; 
         color: var(--quaternary-color);
     }
 
     .close {
         font-size: 15px;
+        float: right; 
+
     }
 
     #MCU-info {
