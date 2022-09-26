@@ -1,9 +1,14 @@
 :root {
     --primary-color: #902724;
     --secondary-color: #f23c27;
-    --tertiary-color: #f7d281; 
-    --quaternary-color: #1b729f; 
-    --quinary-color: #1a323e; 
+    --tertiary-color: #f7d281;
+    --quaternary-color: #1b729f;
+    --quinary-color: #1a323e;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 #firstpage {
@@ -13,12 +18,12 @@
 
 
 #homepage {
-    height: 100%; 
+    height: 100%;
     background-color: var(--primary-color);
-    background-image: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif");  
+    background-image: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif");
     background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover; 
+    background-position: center;
+    background-size: cover;
 
     font-family: sans-serif;
     display: flex;
@@ -26,164 +31,164 @@
 }
 
 .hidden {
-    display: none; 
+    display: none;
 }
 
 
-
-
-
 #titlebox {
-    height: 100%; 
+    height: 100%;
     background-color: var(--primary-color);
-    color: white; 
+    color: white;
     text-align: center;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    animation: fadein 1s; 
+    animation: fadein 1s;
     -webkit-animation: fadein 1s;
 }
 
 
 #titlebox h1 {
     margin-top: 15%;
-    padding-bottom: 10px; 
-    background-color: white; 
+    padding-bottom: 10px;
+    background-color: white;
     overflow: hidden;
     display: inline-block;
-    padding: 10px; 
+    padding: 10px;
     font-weight: bold;
-    color: transparent; 
-    font-size: 100px; 
-    text-transform: uppercase; 
+    color: transparent;
+    font-size: 100px;
+    text-transform: uppercase;
 }
 
 span {
-    background: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif"); 
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text; 
-    display: block; 
+    background: url("https://37.media.tumblr.com/tumblr_mbha9qWF401qcixnko4_500.gif");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: block;
 }
 
 #titlebox p {
     text-align: center;
-    font-size: 35px; 
-    font-weight: 100; 
+    font-size: 35px;
+    font-weight: 100;
 }
 
 #searchbar {
     background-color: var(--primary-color);
     align-items: center;
-    
+
 }
 
 #textbox {
-    font-size: 25px; 
-    padding: 20px; 
-    margin: 0 30%; 
+    font-size: 25px;
+    padding: 20px;
+    margin: 0 30%;
 }
 
 #searchbtn {
-   
-    font-size: 20px; 
-    padding: 20px; 
-    margin: 5% 45% 10% 45%; 
+
+    font-size: 20px;
+    padding: 20px;
+    margin: 5% 45% 10% 45%;
     background-color: var(--primary-color);
     color: black;
-    border: 2px solid black; 
-    
+    border: 2px solid black;
+
 
 }
 
 #searchbtn:hover {
-   
-    background-color: var(--quinary-color); 
-    color: white; 
-    border: 2px solid var(--quinary-color); 
+
+    background-color: var(--quinary-color);
+    color: white;
+    border: 2px solid var(--quinary-color);
 }
 
 a {
-    text-decoration: none; 
+    text-decoration: none;
     color: black;
 }
 
 a:hover {
-    text-decoration: none; 
-    color: white; 
+    text-decoration: none;
+    color: white;
 }
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index:1;
-    left:0;
-    top:0;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     overflow: auto;
-    background-color: var(--tertiary-color);
-    background-color: rgb(12,20,70, 0.5); 
+    background-color: var(--quaternary-color);
+    background-color: rgb(12, 20, 70, 0.5);
 }
 
 .modal-content {
-    color: var(--quaternary-color); 
-    margin: 15% auto; 
+    color: var(--quaternary-color);
+    margin: 15% auto;
     padding: 20px;
-    width: 80%; 
+    width: 80%;
 }
 
 
 .close {
-    color: #aaa; 
+    color: #aaa;
     float: right;
-    font-size: 28px; 
+    font-size: 28px;
     font-weight: bold;
 }
- 
 
-.close:hover , .close:focus {
-    color:black;
+
+.close:hover,
+.close:focus {
+    color: black;
     text-decoration: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 @keyframes fade-in {
     from {
-        opacity:0;
-      
+        opacity: 0;
+
     }
-    to{
-        opacity:1; 
-      
+
+    to {
+        opacity: 1;
+
     }
 }
 
 @-webkit-keyframes fadein {
     from {
         opacity: 0;
-      
+
     }
-     to {
+
+    to {
         opacity: 1;
-     
-     }
-} 
 
-/* end of homepage css */ 
+    }
+}
 
-/* start of unique character index css */ 
+/* end of homepage css */
+
+/* start of unique character index css */
 
 #secondpage {
     background-color: var(--quinary-color);
 }
 
 header {
-    padding: 20px 0; 
-    background-color: var(--tertiary-color); 
+    padding: 20px 0;
+    background-color: var(--tertiary-color);
 }
 
 header a {
-    text-decoration: none; 
+    text-decoration: none;
 
 }
 
@@ -192,27 +197,27 @@ header nav {
 }
 
 header nav ul {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-    color: var(--quaternary-color); 
+    color: var(--quaternary-color);
 }
 
 header nav ul li a {
-    font-family: sans-serif; 
-    color: var(--quaternary-color); 
-    padding: 10px 15px; 
-    font-weight: lighter; 
-    font-size: 1.55vw; 
+    font-family: sans-serif;
+    color: var(--quaternary-color);
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
 
 }
 
 header nav ul li a:hover {
-    color: var(--quaternary-color); 
+    color: var(--quaternary-color);
     font-weight: bold;
-    text-shadow: 1px 1px 2px black; 
+    text-shadow: 1px 1px 2px black;
 }
 
 #MCU-info {
@@ -220,122 +225,178 @@ header nav ul li a:hover {
 }
 
 .character-intro {
-    display: flex; 
+    display: flex;
     font-family: sans-serif;
-    padding: auto; 
-    margin: auto; 
+    padding: auto;
+    margin: auto;
 }
 
 .character-name {
-    padding: 5px; 
+    padding: 5px;
     font-size: 60px;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
-    flex-basis: auto; 
-    margin-top: 5%; 
+    flex-basis: auto;
+    margin-top: 5%;
     letter-spacing: 1em;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px white;
     color: var(--secondary-color);
-    border-radius: 5px; 
+    border-radius: 5px;
 }
+
 .container {
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
- }
+}
 
 .tv-media {
-    background-color: rgb(27,114,159, 0.5);
+    background-color: rgb(27, 114, 159, 0.5);
     border-radius: 5px;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    flex-basis: auto; 
-    margin: 10px; 
+    flex-basis: auto;
+    margin: 10px;
 
 }
 
 .tv-media h3 {
-    color: white; 
+    color: white;
     font-size: 20px;
-    font-weight: 100; 
+    font-weight: 100;
 }
 
 .comics {
-    background-color:  rgb(27,114,159, 0.5); 
-    border-radius: 5px; 
-    display: flex; 
+    background-color: rgb(27, 114, 159, 0.5);
+    border-radius: 5px;
+    display: flex;
     flex-wrap: wrap;
     flex-basis: auto;
-    margin: 10px; 
+    margin: 10px;
 }
 
 .comics h3 {
-    color: white; 
-    font-size: 20px; 
-    font-weight: 100; 
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
 }
 
-  
+
 
 .card {
-    margin: 30px; 
-    padding: 5%; 
-    background-color: var(--primary-color); 
-    border-radius: 5px; 
-    color: white; 
-    display: flex; 
-    flex-wrap:wrap; 
-    flex-basis: 30%; 
-    align-items: center; 
+    margin: 30px;
+    padding: 5%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+    align-items: center;
 }
 
 #custom-search {
     font-family: sans-serif;
-    background-color:  rgb(27,114,159, 0.5); 
-    border-radius: 5px; 
-    display: flex; 
+    background-color: rgb(27, 114, 159, 0.5);
+    border-radius: 5px;
+    display: flex;
     flex-wrap: wrap;
     flex-basis: auto;
     margin: 10px;
 }
 
 #custom-search h3 {
-    color: white; 
-    font-size: 20px; 
-    font-weight: 100; 
-    padding: 5px; 
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px;
 }
 
-      
+
 @media screen and (max-width: 575px) {
 
-    #searchbtn {
-      width: 80%;
-      margin: 10px; 
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    #homepage {
+        height: 100%; 
+    }
+
+
+    #titlebox {
+        height: 100%;
+        margin: 0;
+        animation: none;
+        color: white;
+        background-color: var(--quaternary-color);
     }
 
     #titlebox h1 {
-        font-size: 50px;
+        font-size: 40px;
+        height: 50%;
+        background-color: var(--quaternary-color);
+        color: white;
+
+    }
+
+    span {
+        background:var(--quaternary-color); 
+        -webkit-text-fill-color: var(--secondary-color);
+        text-shadow: 1px 1px 1px black;
+        -webkit-background-clip: none;
+        display: block;
+        
     }
 
     #titlebox p {
-        display: none; 
+        display: none;
+    }
+
+    #textbox {
+        width: 80%;
+        height: 20%; 
+        font-size: 15px;
+        padding: 40px 0;
+        margin: 2% 2% 2% 10%;
+    }
+
+    #searchbtn {
+        width: 80%;
+        margin: 2% 2% 2% 10%;
+        padding: 15px;
+        font-size: 20px;
+        background-color: var(--tertiary-color);
+        border: var(--quinary-color); 
+        color: var(--quinary-color); 
+
+    }
+
+    .modal-content p {
+        font-size: 15px;
+        color: var(--quaternary-color);
+    }
+
+    .close {
+        font-size: 15px;
     }
 
     #MCU-info {
-        display: flex; 
+        display: flex;
         flex-direction: column;
     }
 
     .character-intro {
-        display: flex; 
+        display: flex;
         flex-direction: column;
     }
 
     .characterimg {
-        display: none; 
+        display: none;
     }
 
     .character-name {
@@ -343,9 +404,7 @@ header nav ul li a:hover {
         justify-content: flex-start;
     }
 
-    .tv-media {
-    }
-    
-    .comics{
-    }
+    .tv-media {}
+
+    .comics {}
 }

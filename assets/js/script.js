@@ -21,13 +21,13 @@ console.log(marvelUrl)
 if (characterName === "") {
     console.log("modal start")
     var modal = document.getElementById("characterModal");
-    var span = document.getElementsByClassName("close")[0];
+    var close = document.getElementsByClassName("close")[0];
 
 
         modal.style.display = "block";
 
 
-    $(span).click(function () {
+    $(close).click(function () {
         modal.style.display = "none";
     })
 
