@@ -227,8 +227,14 @@ header nav ul li a:hover {
 
 .character-intro {
     display: flex;
+    flex-direction: column;
     font-family: sans-serif;
     padding: auto;
+}
+
+.charimg{
+    width: 75%; 
+    height: 75%; 
 }
 
 .character-name {
@@ -238,6 +244,7 @@ header nav ul li a:hover {
     text-align: center;
     flex-basis: auto;
     margin-top: 5%;
+    margin-block-end: auto;
     letter-spacing: 1em;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px white;
@@ -258,6 +265,7 @@ header nav ul li a:hover {
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     flex-basis: auto;
     margin: 2%;
 
@@ -273,6 +281,7 @@ header nav ul li a:hover {
     border-radius: 10px;
     margin-top: 5%;
     margin-left: 2%;
+    justify-content: center;
 }
 
 .comics {
@@ -280,6 +289,7 @@ header nav ul li a:hover {
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     flex-basis: auto;
     margin: 2%;
 }
@@ -393,23 +403,39 @@ header nav ul li a:hover {
     #MCU-info {
         display: flex;
         flex-direction: column;
+      
     }
 
     .character-intro {
         display: flex;
         flex-direction: column;
-    }
-
-    .characterimg {
-        display: none;
+       
     }
 
     .character-name {
-        font-size: 15px;
+        font-size: 3em;
         justify-content: flex-start;
+        margin-top: none; 
+        margin-block-end: auto;
     }
 
-    .tv-media {}
+    .charimg {
+        width: 100%; 
+        height: 50%; 
+    }
 
-    .comics {}
+    .tv-media {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comics {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+    }
 }
