@@ -1,6 +1,8 @@
 
 //Marvel Characters API URL
 
+var comics = document.getElementsByClassName("comics"); 
+
 $(document).ready( function() {
 
     
@@ -69,21 +71,31 @@ $.ajax({
             $(".charimg").attr("src", imgPath + ".jpg")
 
             // figure out a way to select the name only and then display each name on individual cards
-            var comicAppearances = $("<div>").text(JSON.stringify(data.results[i].comics.items));
+            var comicAppearances = results[i].comics.items;
             console.log(comicAppearances)
-                comicAppearances.attr("class", "card") 
+        
+        for (i=0; i< comicAppearances.length; i++) {
+            var comicNames = comicAppearances[i].name 
+            console.log(comicNames)
+            comicNamesList = $("<div>").text(comicNames); 
+            comicNamesList.attr("class", "card"); 
+            $(comics).append(comicNamesList); 
+        } }
 
-            $(".comics").append(comicAppearances)
+
+            for (let i=0; i< results.length; i++ ) {
  
-            var seriesAppearances = data.results[i].series.items;
+             var seriesAppearances = results[i].series.items;
             console.log(seriesAppearances)
 
+        for (i=0; i< seriesAppearances.length; i++) {
 
-            var seriesDisplay = $("<div>").text(JSON.stringify(seriesAppearances));
-            console.log(seriesDisplay)
+            var seriesNames = seriesAppearances[i].name 
+            var seriesDisplay = $("<div>").text(seriesNames);
+           
             seriesDisplay.attr("class", "card")
             $(".tv-media").append(seriesDisplay) 
-            }
+        }} 
 
           
 
