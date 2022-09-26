@@ -15,11 +15,13 @@ Then, the user will click in the text box and enter the character for which they
 
 The user will see the character's data as well as any merchandise/ youtube clips associated with the character.  
 
-![Alt text](./assets/images/city-past-save.png)
+![Alt text](./assets/images/charimgandname.png)
+![Alt text](./assets/images/charseries.png)
+![Alt text](./assets/images/charcomics.png)
 
-The user can return to the search page by selecting the "return to homepage" link att the top left corner of the character display page. 
+The user can return to the search page by selecting the "return to homepage" link at the top left corner of the character display page. 
 
-![Alt text](./assets/images/city-retrieve-save.png)
+![Alt text](./assets/images/returntohome.png)
 
 ## Roadmap
 
