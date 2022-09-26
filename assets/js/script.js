@@ -63,6 +63,7 @@ $.ajax({
             localStorage.setItem("img", imgHalf)
             console.log(imgHalf)
             // from localstorage, get the Path and create a var for it and replace "imgHalf" in function below with new variable 
+            //put "path" into a string and make ".jpg" string and then combine strings with .concat() 
             $(".charimg").attr("src", imgHalf + ".jpg")
 
             // figure out a way to select the name only and then display each name on individual cards
