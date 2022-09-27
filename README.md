@@ -7,11 +7,11 @@
 Marvel Character Index uses the Marvel api to call information about character appearances in movies, television, and comic books. This application also uses Google api in order to search for merchandise/youtube clips associated with the character. 
 
 At first, the application user will see the opening page. 
-![Alt text](./assets/images/opening.png)
+![Alt text](./assets/images/openingnew.png)
 
 Then, the user will click in the text box and enter the character for which they would like to retrieve the data. Then, they will click the search button. 
 
-![Alt text](./assets/images/charsearch.png)
+![Alt text](./assets/images/charsearchnew.png)
 
 The user will see the character's data as well as any merchandise/ youtube clips associated with the character.  
 
@@ -22,6 +22,11 @@ The user will see the character's data as well as any merchandise/ youtube clips
 The user can return to the search page by selecting the "return to homepage" link at the top left corner of the character display page. 
 
 ![Alt text](./assets/images/returntohome.png)
+
+When the user returns to the homepage, the user will see a list of past searches and can select any of the names listed to revisit the character's data. 
+
+![Alt text](./assets/images/pastcharsearch.png) 
+
 
 ## Roadmap
 
