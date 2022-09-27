@@ -42,85 +42,94 @@ $(document).ready(function () {
 
         };
 
+        getCharacter();
 
         //fetch function and using the response to dynamically display name, character image, comic appearances, 
         // and movie appearances
+        function getCharacter() {
+            $.ajax({
+                url: marvelUrl,
+                method: "GET"
+            }).then(function (response) {
 
-        $.ajax({
-            url: marvelUrl,
-            method: "GET"
-        }).then(function (response) {
-           
-            var data = response.data
-          
-
-            var results = data.results
+                var data = response.data
 
 
-            for (let i = 0; i < results.length; i++) {
-                var appendedName = $("<div>").text(results[i].name);
-                localStorage.setItem("charactername", results[i].name)
-                $(".character-name").append(appendedName)
+                var results = data.results
 
 
-                var imgHalf = JSON.stringify(results[i].thumbnail.path);
-                var imgLocal = imgHalf.slice(1, -1)
-
-                var jpgTag = ".jpg"
-                var imgUrl = imgLocal.concat("", jpgTag)
-                $(".charimg").attr("src", imgUrl)
+                for (let i = 0; i < results.length; i++) {
+                    var appendedName = $("<div>").text(results[i].name);
+                    $(".character-name").append(appendedName)
 
 
-                var comicAppearances = results[i].comics.items;
+                    var imgHalf = JSON.stringify(results[i].thumbnail.path);
+                    var imgLocal = imgHalf.slice(1, -1)
 
-                for (i = 0; i < comicAppearances.length; i++) {
-                    var comicNames = comicAppearances[i].name
-                    comicNamesList = $("<div>").text(comicNames);
-                    comicNamesList.attr("class", "card");
-                    $(comics).append(comicNamesList);
+                    var jpgTag = ".jpg"
+                    var imgUrl = imgLocal.concat("", jpgTag)
+                    $(".charimg").attr("src", imgUrl)
+
+
+                    var comicAppearances = results[i].comics.items;
+
+                    for (i = 0; i < comicAppearances.length; i++) {
+                        var comicNames = comicAppearances[i].name
+                        comicNamesList = $("<div>").text(comicNames);
+                        comicNamesList.attr("class", "card");
+                        $(comics).append(comicNamesList);
+                    }
                 }
-            }
 
 
-            for (let i = 0; i < results.length; i++) {
+                for (let i = 0; i < results.length; i++) {
 
-                var seriesAppearances = results[i].series.items;
+                    var seriesAppearances = results[i].series.items;
 
-                for (i = 0; i < seriesAppearances.length; i++) {
+                    for (i = 0; i < seriesAppearances.length; i++) {
 
-                    var seriesNames = seriesAppearances[i].name
-                    var seriesDisplay = $("<div>").text(seriesNames);
+                        var seriesNames = seriesAppearances[i].name
+                        var seriesDisplay = $("<div>").text(seriesNames);
 
-                    seriesDisplay.attr("class", "card")
-                    $(".tv-media").append(seriesDisplay)
+                        seriesDisplay.attr("class", "card")
+                        $(".tv-media").append(seriesDisplay)
+                    }
                 }
-            }
 
 
-            // saying to run second html function 
-            secondHTML();
+                // saying to run second html function 
+                secondHTML();
 
 
-            //adds class "hidden" to first page so it is not in view, and removes class "hidden" from second page 
-            // so it is. 
-            function secondHTML() {
+                //adds class "hidden" to first page so it is not in view, and removes class "hidden" from second page 
+                // so it is. 
+                function secondHTML() {
 
-                $("#firstpage").addClass("hidden")
+                    $("#firstpage").addClass("hidden")
 
-                $("#secondpage").removeClass("hidden")
+                    $("#secondpage").removeClass("hidden")
 
-            }
+                }
 
 
+             
+            })
+        }
+        localStorage.setItem("charactername", characterName)
 
+        var btnContainer = document.getElementById("pastsearch")
+        var btnText = localStorage.getItem("charactername")
+        var btn = document.createElement("button")
+        btn.innerHTML = btnText
+        btn.setAttribute("class", "pastbtn")
+        btn.setAttribute("type", "button")
+        btnContainer.append(btn)
+
+
+        btn.addEventListener("click", function (event) {
+            characterName = $(this).text();
+            getCharacter();
         })
-
-        
-        var pastLi = document.createElement("li")
-    
-         pastLi = localStorage.getItem("charactername")
-         console.log(pastLi)
-         $("#pastsearch").append(pastLi)
 
     })
     // created button for homepage link at top of second page so pages don't refresh (not clicking on link) 
@@ -129,12 +138,12 @@ $(document).ready(function () {
         $("#secondpage").addClass("hidden")
         $("#firstpage").removeClass("hidden")
         $("#textbox").val("")
-        $(".character-name").empty() 
+        $(".character-name").empty()
         $(".tv-media").empty()
-        $(comics).empty() 
+        $(comics).empty()
     })
 
-   
+
 
 
 
