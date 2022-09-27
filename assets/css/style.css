@@ -144,8 +144,10 @@ a:hover {
     background-color: rgb(12, 20, 70, 0.5);
 }
 
+
+
 .modal-content {
-    color: var(--quaternary-color);
+    color: var(--quinary-color);
     margin: 15% auto;
     padding: 20px;
     width: 80%;
@@ -162,7 +164,7 @@ a:hover {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--secondary-color);
     text-decoration: none;
     cursor: pointer;
 }
@@ -424,7 +426,7 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     }
 
     #searchbtn {
-        margin: 5% 0 60% 0; 
+        margin: 5% 0 30% 0; 
         padding: 20px;
         font-size: 20px;
         background-color: var(--tertiary-color);
@@ -446,7 +448,7 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     }
 
     .modal {
-        z-index: inherit;
+        z-index: 1;
         background-color: rgb(12, 20, 70, 0.5);
         background: var(--tertiary-color); 
     }
