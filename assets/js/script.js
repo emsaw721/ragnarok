@@ -19,7 +19,8 @@ $(document).ready(function () {
         var marvelUrl = "https://gateway.marvel.com/v1/public/characters?name=" + characterName + "&ts=" + ts + "&apikey=" + apiKey + "&hash=" + hash
         console.log(marvelUrl)
 
-
+        // basically saying if no character name in textbox, then bring up the modal that tells the user to put 
+        //in a character name
         if (characterName === "") {
             console.log("modal start")
             var modal = document.getElementById("characterModal");
@@ -43,7 +44,8 @@ $(document).ready(function () {
         };
 
 
-        //fetch function
+        //fetch function and using the response to dynamically display name, character image, comic appearances, 
+        // and movie appearances
 
         $.ajax({
             url: marvelUrl,
@@ -95,11 +97,12 @@ $(document).ready(function () {
             }
 
 
-
+            // saying to run second html function 
             secondHTML();
 
 
-
+            //adds class "hidden" to first page so it is not in view, and removes class "hidden" from second page 
+            // so it is. 
             function secondHTML() {
 
                 $("#firstpage").addClass("hidden")
@@ -112,28 +115,31 @@ $(document).ready(function () {
         })
 
 
-       
+       //creating an array of past characters to put into local storage 
         pastCharacters.push(characterName);
-
+        //setting past characters into local storage 
         localStorage.setItem("pastcharacters", pastCharacters);
 
 
         console.log(pastCharacters)
 
-
+        //create container for past characters buttons
         var btnContainer = document.getElementById("pastsearch");
-
+        //creating button elements for each past character, getting the names from the pastcharacters array,
+        //setting class adn types to dynamically generated buttons, and appending to button container
         var btn = document.createElement("button");
         btn.innerHTML = localStorage.getItem("pastcharacters");
         btn.setAttribute("class", "charbtn");
         btn.setAttribute("type", "button");
         btnContainer.append(btn);
+        //add one event listener to each button so it only does one api call for data 
         btn.addEventListener("click", function (event) {
             characterName = $(this).text();
 
         })
     })
-
+    // created button for homepage link at top of second page so pages don't refresh (not clicking on link) 
+    //when the homepagebtn is clicked, secondpage html is hidden and firstpage html is unhidden, textbox is cleared 
     $(".homepagebtn").click(function(){
         $("#secondpage").addClass("hidden")
         $("#firstpage").removeClass("hidden")
