@@ -137,7 +137,7 @@ $(document).ready(function () {
     $(".homepagebtn").click(function(){
         $("#secondpage").addClass("hidden")
         $("#firstpage").removeClass("hidden")
-        $("#textbox").val();
+        $("#textbox").val("")
     })
 
 

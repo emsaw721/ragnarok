@@ -114,7 +114,7 @@ a:hover {
 }
 
 .pastsrch {
-     padding: 10px 0; 
+     padding: 10px; 
      display: flex;
      flex-direction: column; 
      align-items: center; 
@@ -122,9 +122,11 @@ a:hover {
  
  .charbtn {
      color: var(--quaternary-color); 
-     margin: 5px 0; 
+     background-color: var(--tertiary-color);
+     font-size: large;
+     margin: 3%; 
      border-radius: 5px;
-     padding: 1px 43%; 
+     padding: 2% 43%; 
  
  }
 
@@ -220,9 +222,11 @@ header nav ul {
     color: var(--quaternary-color);
 }
 
-header nav ul li a /*,.dropbtn*/ {
+header nav ul li button /*,.dropbtn*/ {
     font-family: sans-serif;
     color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
+    border: none; 
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 3em;
@@ -230,11 +234,12 @@ header nav ul li a /*,.dropbtn*/ {
 }
 
 
-header nav ul li a:hover /*, .dropdown:hover .dropbtn*/ {
+header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     color: var(--quaternary-color);
     font-weight: bold;
     text-shadow: 1px 1px 2px black;
 }
+
 
 /* li.dropdown {
     display: inline-block; 
