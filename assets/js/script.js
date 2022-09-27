@@ -50,15 +50,16 @@ $(document).ready(function () {
             url: marvelUrl,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
+           
             var data = response.data
-            console.log(data)
+          
 
             var results = data.results
-            console.log(results)
+
 
             for (let i = 0; i < results.length; i++) {
                 var appendedName = $("<div>").text(results[i].name);
+                localStorage.setItem("charactername", results[i].name)
                 $(".character-name").append(appendedName)
 
 
@@ -114,8 +115,12 @@ $(document).ready(function () {
 
         })
 
-      
-
+        
+        var pastLi = document.createElement("li")
+    
+         pastLi = localStorage.getItem("charactername")
+         console.log(pastLi)
+         $("#pastsearch").append(pastLi)
 
     })
     // created button for homepage link at top of second page so pages don't refresh (not clicking on link) 
@@ -128,6 +133,9 @@ $(document).ready(function () {
         $(".tv-media").empty()
         $(comics).empty() 
     })
+
+   
+
 
 
     // var googleKey = AIzaSyCqukRh9S6YNRuqZEe3sQaOP34Lh2lM-Ko
