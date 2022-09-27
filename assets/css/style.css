@@ -121,10 +121,12 @@ a:hover {
  }
 
  .pastbtn {
-    color: var(--quinary-color); 
+    color: var(--quaternary-color); 
     background-color: var(--tertiary-color);
+    font-size: 2em;
+    font-weight: bold;
     border-radius: 5px;
-    padding: 2% 43%; 
+    padding: 2% 30%; 
 
 }
 
