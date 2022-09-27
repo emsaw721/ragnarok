@@ -134,6 +134,12 @@ $(document).ready(function () {
         })
     })
 
+    $(".homepagebtn").click(function(){
+        $("#secondpage").addClass("hidden")
+        $("#firstpage").removeClass("hidden")
+        $("#textbox").val();
+    })
+
 
     // var googleKey = AIzaSyCqukRh9S6YNRuqZEe3sQaOP34Lh2lM-Ko
     // $.ajax ({
