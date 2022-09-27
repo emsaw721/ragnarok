@@ -282,7 +282,11 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     font-family: sans-serif;
     padding: auto;
 }
-
+.characterimg {
+    background-color: var(--quaternary-color);
+    display:flex; 
+    justify-content: center; 
+}
 .charimg{
     width: 75%; 
     height: 75%; 
@@ -294,14 +298,12 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     justify-content: center;
     text-align: center;
     flex-basis: auto;
-    margin-top: 5%;
     margin-block-end: auto;
     letter-spacing: 1em;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px white;
     color: var(--secondary-color);
     background-color: var(--quaternary-color); 
-    border-radius: 5px;
 }
 
 .container {
