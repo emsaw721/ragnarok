@@ -134,7 +134,7 @@ a:hover {
 .modal {
     display: none;
     position: absolute;
-    z-index: 1000;
+    z-index: 1;
     left: 35%;
     top: 0;
     width: 100%;
@@ -356,6 +356,7 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     padding: 5%;
     background-color: var(--primary-color);
     border-radius: 5px;
+    border-style: round;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -389,6 +390,9 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
         margin: 0;
     }
 
+    .pastsrch {
+
+    }
 
     #titlebox {
         height: 100%;
@@ -415,7 +419,7 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
         
     }
 
-    #titlebox p {
+    .subtitle p {
         display: none;
     }
 
@@ -448,6 +452,8 @@ header nav ul li button:hover /*, .dropdown:hover .dropbtn*/ {
     }
 
     .modal {
+        left :0;
+        top: 0;
         z-index: 1;
         background-color: rgb(12, 20, 70, 0.5);
         background: var(--tertiary-color); 
