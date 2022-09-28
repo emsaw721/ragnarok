@@ -173,6 +173,7 @@ $(document).ready(function () {
         $(".character-name").empty()
         $(".tv-media").empty()
         $(comics).empty()
+        $("#giphyhome").empty(); 
 
 
        
