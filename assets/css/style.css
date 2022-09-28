@@ -317,6 +317,7 @@ header nav ul li button:hover
     margin-top: 5%;
     margin-left: 2%;
     justify-content: center;
+    width: fit-content; 
 }
 
 .comics {
@@ -344,15 +345,33 @@ header nav ul li button:hover
     align-items: center;
 }
 
+#giphycontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: inherit; 
+}
+
+
+
 
 .giphy {
     background-color: rgb(27, 114, 159, 0.7);
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 2%;
+    padding: 1em; 
+}
+
+.giphyImg {
+    background-color: rgb(27, 114, 159, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    flex-basis: auto;
     margin: 2%;
 }
 
