@@ -13,6 +13,9 @@ Then, the user will click in the text box and enter the character for which they
 
 ![Alt text](./assets/images/charsearchnew.png)
 
+If the user clicks the search button without entering a character name first, a modal will appear and propt the user to enter a character name. 
+![Alt text](./assets/images/modal.png)
+
 The user will see the character's data as well as five gifs associated with the character.  
 
 ![Alt text](./assets/images/charimgandname.png)
