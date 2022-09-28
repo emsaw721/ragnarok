@@ -13,11 +13,12 @@ Then, the user will click in the text box and enter the character for which they
 
 ![Alt text](./assets/images/charsearchnew.png)
 
-The user will see the character's data as well as any merchandise/ youtube clips associated with the character.  
+The user will see the character's data as well as five gifs associated with the character.  
 
 ![Alt text](./assets/images/charimgandname.png)
 ![Alt text](./assets/images/charseries.png)
 ![Alt text](./assets/images/charcomics.png)
+![Alt text](./assets/images/giphysection.png)
 
 The user can return to the search page by selecting the "return to homepage" link at the top left corner of the character display page. 
 
@@ -30,7 +31,7 @@ When the user returns to the homepage, the user will see a list of past searches
 
 ## Roadmap
 
-Future iterations of this app will have 
+Future iterations of this app will have cards with working links to an online edition of the comic books/ series name it is displaying, the animation on the front page will include a zoom out as well as the fade in, and the gifs section will get five additional gifs for every call, not just the five designated for the time of day. 
 
 
 ## Authors and acknowledgment
