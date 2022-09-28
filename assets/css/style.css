@@ -374,22 +374,18 @@ header nav ul li button:hover
     align-items: center;
 }
 
-#custom-search {
-    font-family: sans-serif;
-    background-color: rgb(27, 114, 159, 0.5);
+
+.giphy {
+    background-color: rgb(27, 114, 159, 0.7);
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     flex-basis: auto;
-    margin: 10px;
+    margin: 2%;
 }
 
-#custom-search h3 {
-    color: white;
-    font-size: 20px;
-    font-weight: 100;
-    padding: 5px;
-}
 
 
 @media screen and (max-width: 575px) {
