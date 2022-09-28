@@ -11,7 +11,7 @@ $(document).ready(function () {
     $("#searchbtn").click(function () {
         var giphyApiKey = "KTxKYssNF5dSbkEvJSXYTQEL2dOYbCJe"
         var characterName = $("#textbox").val();
-        var giphyUrl = "https://api.giphy.com/v1/gifs/search?q=" + characterName +"&api_key=" + giphyApiKey+ "&limit=15" 
+        var giphyUrl = "https://api.giphy.com/v1/gifs/search?q=" + characterName +"&api_key=" + giphyApiKey+ "&limit=5" 
         console.log(giphyUrl)
 
         
@@ -27,10 +27,16 @@ $(document).ready(function () {
 
             for (var i=0; i< data.length; i++) {
                 var imageUrl = data[i].images.original.url
+                console.log(imageUrl)
 
-                $(".giphyImg").attr("src", imageUrl) 
+                function createImg() {
+                    var img = document.createElement("img")
+                    img.src = imageUrl
+                    document.getElementById("giphyhome").appendChild(img)
+                }
 
-              
+                createImg(); 
+
             }
         })
 
