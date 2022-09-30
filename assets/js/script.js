@@ -9,37 +9,7 @@ $(document).ready(function () {
 
 
     $("#searchbtn").click(function () {
-        var giphyApiKey = "KTxKYssNF5dSbkEvJSXYTQEL2dOYbCJe"
-        var characterName = $("#textbox").val();
-        var giphyUrl = "https://api.giphy.com/v1/gifs/search?q=" + characterName +"&api_key=" + giphyApiKey+ "&limit=5" 
-        console.log(giphyUrl)
-
-        
-        $.ajax({
-            url: giphyUrl, 
-            method: "GET" 
-        }).then(function (response) {
-            console.log(response) 
-
-            var data= response.data
-
-            console.log(data)
-
-            for (var i=0; i< data.length; i++) {
-                var imageUrl = data[i].images.original.url
-                console.log(imageUrl)
-
-                function createImg() {
-                    var img = document.createElement("img")
-                    img.src = imageUrl
-                    document.getElementById("giphyhome").appendChild(img)
-                }
-
-                createImg(); 
-
-            }
-        })
-
+    
 
         var apiKey = "65ccc0475fbe74a76cd9393f0c51a7bd"
         var privateKey = "0b99ee2827d2a7cf3d74437bb5ec552cc183ef69"
@@ -79,6 +49,37 @@ $(document).ready(function () {
         //fetch function and using the response to dynamically display name, character image, comic appearances, 
         // and movie appearances
         function getCharacter() {
+            var giphyApiKey = "KTxKYssNF5dSbkEvJSXYTQEL2dOYbCJe"
+            var characterName = $("#textbox").val();
+            var giphyUrl = "https://api.giphy.com/v1/gifs/search?q=" + characterName +"&api_key=" + giphyApiKey+ "&limit=5" 
+            console.log(giphyUrl)
+    
+            
+            $.ajax({
+                url: giphyUrl, 
+                method: "GET" 
+            }).then(function (response) {
+                console.log(response) 
+    
+                var data= response.data
+    
+                console.log(data)
+    
+                for (var i=0; i< data.length; i++) {
+                    var imageUrl = data[i].images.original.url
+                    console.log(imageUrl)
+    
+                    function createImg() {
+                        var img = document.createElement("img")
+                        img.src = imageUrl
+                        document.getElementById("giphyhome").appendChild(img)
+                    }
+    
+                    createImg(); 
+    
+                }
+            })
+
             $.ajax({
                 url: marvelUrl,
                 method: "GET"
@@ -161,6 +162,7 @@ $(document).ready(function () {
         btn.addEventListener("click", function (event) {
             characterName = $(this).text();
             getCharacter();
+            
         })
 
     })
